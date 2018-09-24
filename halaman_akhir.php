@@ -20,13 +20,14 @@ session_start();
 				</tr>
 				<?php 
 				$data = $_SESSION['hobby'];
+				$index = 0;
 				foreach ($data as $value) {
 				?>
 				<tr>
 					<td><?php echo $value; ?></td>
 					<td>
 						<form action=" " method="post">
-							<input type="hidden" name="index" value="<?php echo $value; ?>">
+							<input type="hidden" name="index" value="<?php echo $index; ?>">
 							<input type="submit" name="delete" value="Hapus">
 						</form>
 					</td>
@@ -42,5 +43,6 @@ session_start();
 if (isset($_POST['delete']) && isset($_POST['index'])) {
 	$index_value = $_POST['index'];
 	$data = $_SESSION['hobby'];
+	unset($_SESSION['hobby'][$index_value]);
 }
 ?>

@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-silakan isi disini
-
-</body>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form action="proses.php" method="post" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td valign="top">
+						<label>Hobby : </label>
+					</td>
+					<td>
+						<input type="checkbox" name="hobby[]" value="Membaca">Membaca<br>
+						<input type="checkbox" name="hobby[]" value="Menulis">Menulis<br>
+						<input type="checkbox" name="hobby[]" value="Memasak">Memasak<br>
+						<input type="checkbox" name="hobby[]" value="Mereparasi Barang">Mereparasi Barang<br>
+						<input type="checkbox" name="hobby[]" value="Bersepeda">Bersepeda<br>
+						<input type="checkbox" name="hobby[]" value="Memancing">Memancing<br>
+						<input type="checkbox" name="hobby[]" value="Balapan">Balapan<br>
+						<input type="checkbox" name="hobby[]" value="Berenang">Berenang<br>
+						<input type="checkbox" name="hobby[]" value="Badminton">Badminton<br>
+						<input type="checkbox" name="hobby[]" value="Futsal">Futsal<br>
+						<input type="checkbox" name="hobby[]" value="Basket">Basket<br>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+						<label>Foto : </label>
+					</td>
+					<td>
+						<input type="file" name="foto"><br>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" name="submit" value="Submit">
+				</tr>
+			</table>
+		</form>
+	</body>
 </html>
